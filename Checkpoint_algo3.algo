@@ -15,7 +15,7 @@ Read (n);
         Read (v[j])
         Read (w[j])
     END_FOR
-    dot_product_proc(v,w,ps);
+    dot_Scalar_proc(v,w,ps);
     IF (ps:=0) THEN
         Write ("vectors are orthogonals")
     ELSE
@@ -24,7 +24,7 @@ Read (n);
     END_FOR
 END
 
-FUNCTION dot_scalar(): INTEGER
+FUNCTION dot_scalar_function(): INTEGER
 VAR
     v1,v2: ARRAY_OF INTEGER[2];
     x:=INTEGER
@@ -32,10 +32,10 @@ BEGIN
     RETURN x:= v1[0]*v2[0]+v1[1]*v2[1]; ;
 END
 
-ALGORITHM dot_product_funtion
+ALGORITHM dot_product
 VAR
     v: ARRAY_OF INTEGER[2];
-    w:ARRAY_OF INTEGER[2];
+    w: ARRAY_OF INTEGER[2];
     n,i,j,ps:INTEGER;
 BEGIN
  Read (n);
@@ -44,7 +44,7 @@ BEGIN
         Read (v[j])
         Read (w[j])
     END_FOR
-    ps:=dot_product_function()
+    ps:=dot_scalar_function()
     IF (ps:=0) THEN
         Write ("vectors are orthogonals")
     ELSE
